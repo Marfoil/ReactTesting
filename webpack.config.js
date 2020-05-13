@@ -4,7 +4,7 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const publicPath = filename => path.join(__dirname, `public/${filename}`);
+const publicPath = (filename) => path.join(__dirname, `public/${filename}`);
 
 module.exports = () => {
 	// call dotenv and it will return an Object with a parsed key
@@ -21,7 +21,7 @@ module.exports = () => {
 		output: {
 			path: path.join(__dirname, 'dist'),
 			filename: 'bundle.[hash:8].js',
-			chunkFilename: '[id].[hash:8].chunk.js'
+			chunkFilename: '[id].[hash:8].chunk.js',
 		},
 
 		module: {
@@ -29,19 +29,23 @@ module.exports = () => {
 				{
 					loader: 'babel-loader',
 					test: /\.jsx$/,
-					exclude: /node_modules/
+					exclude: /node_modules/,
 				},
 				{
 					test: /\.s?css$/,
-					use: ['style-loader', 'css-loader', 'sass-loader']
-				}
-			]
+					use: ['style-loader', 'css-loader', 'sass-loader'],
+				},
+				{
+					test: /\.png$/,
+					use: 'url-loader',
+				},
+			],
 		},
 		devtool: 'cheap-module-eval-source-map',
 		devServer: { contentBase: path.join(__dirname, 'public'), open: true },
 		mode: 'development',
 		resolve: {
-			extensions: ['.jsx', '.js', '.json']
+			extensions: ['.jsx', '.js', '.json'],
 		},
 		plugins: [
 			new webpack.DefinePlugin(envKeys),
@@ -49,9 +53,9 @@ module.exports = () => {
 
 			new HtmlWebpackPlugin({
 				template: publicPath('index.html'),
-				favicon: publicPath('img/react-logo.png')
+				favicon: publicPath('img/react-logo.png'),
 			}),
-			new webpack.ProgressPlugin()
-		]
+			new webpack.ProgressPlugin(),
+		],
 	};
 };

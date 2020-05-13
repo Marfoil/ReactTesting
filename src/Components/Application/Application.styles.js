@@ -1,8 +1,9 @@
 import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
-	title: {
-		backgroundColor: 'blue',
-		color: 'white',
+	main: {
+		backgroundImage: (props) => `url(${props.image})`,
+		height: '100vh',
+		width: '100vw',
 	},
 });
