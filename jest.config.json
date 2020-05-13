@@ -1,0 +1,6 @@
+{
+	"setupFiles": ["raf/polyfill", "<rootDir>/setupTests.js"],
+	"snapshotSerializers": ["enzyme-to-json/serializer"],
+	"coveragePathIgnorePatterns": ["/node_modules/"],
+	"testResultsProcessor": "jest-sonar-reporter"
+}
