@@ -27,3 +27,6 @@ yarn-error.log*
 
 # distribution folder
 dist
+
+#ignore vscode settings
+.vscode
