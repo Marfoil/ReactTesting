@@ -1,26 +1,24 @@
-import { createUseStyles } from 'react-jss';
+import { css } from 'emotion';
 
-export const useStyles = createUseStyles({
-    main: {
-        backgroundImage: props => `url(${props.image})`,
-        height: '100vh',
-        width: '100vw',
-        zIndex: -1,
-        color: 'white',
-        backgroundPosition: 'center',
-        display: 'grid',
-        gridTemplateRows: '5% 1fr',
-        gridTemplateAreas: `
-        'navigation'
-        'body'
-        'footer'
-        `,
-    },
-    navigation: {
-        paddingLeft: '1rem',
-        display: 'flex',
-        alignItems: 'center',
-        gridArea: 'navigation',
-        backgroundColor: 'rgba(0,0,0,0.7)',
-    },
+const main = css({
+    backgroundColor: '#242424',
+    height: '100vh',
+    width: '100vw',
+    zIndex: -1,
+    color: 'white',
+    backgroundPosition: 'center',
+    display: 'grid',
+    gridTemplateRows: '5% 1fr',
+    gridTemplateAreas: `
+    'navigation'
+    'body'
+    'footer'
+    `,
+    fontFamily: "'Roboto', sans-serif",
 });
+const body = css({
+    paddingLeft: '1rem',
+    marginTop: '1rem',
+});
+
+export default { main, body };
