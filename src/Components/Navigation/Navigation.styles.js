@@ -3,7 +3,7 @@ import { css } from 'emotion';
 const main = css({
     paddingLeft: '1rem',
     display: 'grid',
-    gridTemplateColumns: '15% 1fr 30%',
+    gridTemplateColumns: '15% 1fr 15%',
     gridTemplateAreas: `'home navigationLinks search'`,
     alignItems: 'center',
     gridArea: 'navigation',
