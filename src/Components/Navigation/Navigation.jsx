@@ -3,7 +3,7 @@ import homeImg from '../../../public/img/home.png';
 import classes from './Navigation.styles';
 import { Search } from '../Search/Search';
 
-export const Navigation = props => {
+export const Navigation = () => {
     return (
         <div className={classes.main}>
             <div className={classes.home}>
@@ -14,6 +14,8 @@ export const Navigation = props => {
                 <div className={classes.navigationItem}>Cosa2</div>
                 <div className={classes.navigationItem}>Cosa3</div>
                 <div className={classes.navigationItem}>Cosa4</div>
+            </div>
+            <div className={classes.search}>
                 <Search />
             </div>
         </div>

@@ -3,8 +3,8 @@ import { css } from 'emotion';
 const main = css({
     paddingLeft: '1rem',
     display: 'grid',
-    gridTemplateColumns: '15% 1fr',
-    gridTemplateAreas: `'home navigationLinks'`,
+    gridTemplateColumns: '15% 1fr 30%',
+    gridTemplateAreas: `'home navigationLinks search'`,
     alignItems: 'center',
     gridArea: 'navigation',
     backgroundColor: 'rgba(0,0,0,0.2)',
@@ -34,12 +34,11 @@ const navigationItem = css({
 
 const home = css({
     gridArea: 'home',
-    transformOrigin: 'left',
-    transition: 'all .5s ease-in-out',
-    '&:hover': {
-        transform: 'scale(1.3)',
-    },
     '& img': {
+        '&:hover': {
+            transition: 'all .5s ease-in-out',
+            transform: 'scale(1.3)',
+        },
         cursor: 'pointer',
         width: '2rem',
         height: '2rem',
@@ -47,9 +46,17 @@ const home = css({
     label: 'home',
 });
 
+const search = css({
+    gridArea: 'search',
+    label: 'search',
+    marginRight: '2rem',
+    justifySelf: 'right',
+});
+
 export default {
     main,
     navigation,
     navigationItem,
     home,
+    search,
 };
