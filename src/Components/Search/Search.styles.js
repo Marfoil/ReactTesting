@@ -30,6 +30,8 @@ const input = css({
     background: '#616161',
     color: 'white',
     border: 0,
+    paddingRight: '0.5rem',
+    paddingLeft: '0.5rem',
 });
 
 export default {

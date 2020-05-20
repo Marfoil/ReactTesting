@@ -18,9 +18,14 @@ export const Search = () => {
     return (
         <div className={classes.wrapper} onMouseLeave={handleMouseOut}>
             <div className={classes.wrapperInput(displayInput)}>
-                <input onChange={onChangeFilter} className={classes.input} value={filterText} />
+                <input id="searchInput" onChange={onChangeFilter} className={classes.input} value={filterText} />
             </div>
-            <img className={classes.icon} src={searchImg} onMouseOver={() => setDisplayInput(true)} />
+            <img
+                className={classes.icon}
+                src={searchImg}
+                onMouseOver={() => setDisplayInput(true)}
+                onClick={() => searchInput.focus()}
+            />
         </div>
     );
 };
