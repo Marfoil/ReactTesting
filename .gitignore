@@ -30,3 +30,6 @@ dist
 
 #ignore vscode settings
 .vscode
+
+#ignore .env files
+.env
