@@ -37,7 +37,7 @@ const home = css({
     '& img': {
         '&:hover': {
             transition: 'all .5s ease-in-out',
-            transform: 'scale(1.3)',
+            transform: 'scale(1.2)',
         },
         cursor: 'pointer',
         width: '2rem',

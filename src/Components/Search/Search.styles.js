@@ -12,7 +12,7 @@ const icon = css({
     transition: 'all .5s ease',
     cursor: 'pointer',
     '&:hover': {
-        transform: 'scale(1.3)',
+        transform: 'scale(1.1)',
     },
     label: 'searchIcon',
 });

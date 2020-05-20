@@ -8,7 +8,7 @@ const main = css({
     color: 'white',
     backgroundPosition: 'center',
     display: 'grid',
-    gridTemplateRows: '5% 1fr',
+    gridTemplateRows: 'auto 1fr',
     gridTemplateAreas: `
     'navigation'
     'body'
