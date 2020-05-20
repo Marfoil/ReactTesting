@@ -8,7 +8,7 @@ export const Application = () => {
     return (
         <Provider store={store}>
             <div className={classes.main}>
-                <Navigation>Navigation</Navigation>
+                <Navigation />
                 <div className={classes.body}>Body</div>
             </div>
         </Provider>
