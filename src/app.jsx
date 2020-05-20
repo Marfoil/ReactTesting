@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
-import { Application } from './Components/Application/Application';
+import { Login } from './components/Login/Login';
 
-ReactDOM.render(<Application />, document.getElementById('app'));
+ReactDOM.render(<Login />, document.getElementById('app'));
