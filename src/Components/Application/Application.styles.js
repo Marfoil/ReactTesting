@@ -12,13 +12,12 @@ const main = css({
     gridTemplateAreas: `
     'navigation'
     'body'
-    'footer'
     `,
     fontFamily: "'Roboto', sans-serif",
 });
+
 const body = css({
-    paddingLeft: '1rem',
-    marginTop: '1rem',
+    marginLeft: '1rem',
 });
 
 export default { main, body };

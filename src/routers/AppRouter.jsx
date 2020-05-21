@@ -9,10 +9,12 @@ export const AppRouter = () => (
     <Provider store={store}>
         <BrowserRouter>
             <>
-                <Navigation />
                 <Switch>
                     <Route path="/" exact={true} component={Login} />
-                    <Route path="/home" component={Application}></Route>
+                    <Route path="/home">
+                        <Navigation />
+                        <Application />
+                    </Route>
                     <Route render={() => <>Error 404, Page not found!</>} />
                 </Switch>
             </>

@@ -1,16 +1,18 @@
 import { css } from 'emotion';
 
 const main = css({
+    backgroundColor: '#242424',
     paddingLeft: '1rem',
     display: 'grid',
     gridTemplateColumns: '15% 1fr 15%',
     gridTemplateAreas: `'home navigationLinks search'`,
     alignItems: 'center',
     gridArea: 'navigation',
-    backgroundColor: 'rgba(0,0,0,0.2)',
     borderBottom: '1px solid rgba(255,255,255,.25)',
     userSelect: 'none',
-    label: 'main',
+    label: 'Navigationmain',
+    color: 'white',
+    fontFamily: "'Roboto', sans-serif",
 });
 
 const navigation = css({
