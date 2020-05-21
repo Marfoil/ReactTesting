@@ -3,7 +3,7 @@ import { css } from 'emotion';
 const main = css({
     backgroundColor: '#242424',
     height: '100%',
-    width: '100vw',
+    width: '100%',
     color: 'white',
     display: 'flex',
     fontFamily: "'Roboto', sans-serif",
