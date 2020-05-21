@@ -2,22 +2,16 @@ import { css } from 'emotion';
 
 const main = css({
     backgroundColor: '#242424',
-    height: '100vh',
+    height: '100%',
     width: '100vw',
-    zIndex: -1,
     color: 'white',
-    backgroundPosition: 'center',
-    display: 'grid',
-    gridTemplateRows: 'auto 1fr',
-    gridTemplateAreas: `
-    'navigation'
-    'body'
-    `,
+    display: 'flex',
     fontFamily: "'Roboto', sans-serif",
 });
-
 const body = css({
-    marginLeft: '1rem',
+    paddingLeft: '1rem',
+    marginTop: '1rem',
+    overflowY: 'auto',
 });
 
 export default { main, body };

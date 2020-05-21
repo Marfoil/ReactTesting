@@ -1,24 +1,24 @@
 import { css } from 'emotion';
 
 const main = css({
+    height: '100%',
     backgroundColor: '#242424',
     paddingLeft: '1rem',
     display: 'grid',
     gridTemplateColumns: '15% 1fr 15%',
-    gridTemplateAreas: `'home navigationLinks search'`,
     alignItems: 'center',
     gridArea: 'navigation',
     borderBottom: '1px solid rgba(255,255,255,.25)',
     userSelect: 'none',
-    label: 'Navigationmain',
     color: 'white',
     fontFamily: "'Roboto', sans-serif",
+    boxSizing: 'border-box',
+    label: 'Navigationmain',
 });
 
 const navigation = css({
     display: 'flex',
     transition: 'font-size .5s ease',
-    gridArea: 'navigationLinks',
     label: 'navigation',
     justifyContent: 'center',
     alignItems: 'center',
@@ -35,7 +35,6 @@ const navigationItem = css({
 });
 
 const home = css({
-    gridArea: 'home',
     '& img': {
         '&:hover': {
             transition: 'all .5s ease-in-out',
@@ -49,7 +48,6 @@ const home = css({
 });
 
 const search = css({
-    gridArea: 'search',
     label: 'search',
     marginRight: '2rem',
     justifySelf: 'right',
