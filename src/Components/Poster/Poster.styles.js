@@ -16,9 +16,9 @@ const image = css({
     width: '100%',
 });
 
-const tittle = css({
+const title = css({
     marginTop: '0.5rem',
-    label: 'tittle',
+    label: 'title',
     width: '100%',
     textAlign: 'center',
     // fontFamily: "'Roboto', sans-serif",
@@ -27,5 +27,5 @@ const tittle = css({
 export default {
     wrapper,
     image,
-    tittle,
+    title,
 };
