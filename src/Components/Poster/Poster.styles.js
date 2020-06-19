@@ -4,10 +4,13 @@ const wrapper = css({
     label: 'imageWrapper',
     width: '10rem',
     marginTop: '1rem',
-    border: '1px solid gold',
     height: 'fit-content',
     userSelect: 'none',
     cursor: 'pointer',
+    ':hover': {
+        transform: 'scale(1.2)',
+    },
+    transition: 'all .2s',
 });
 
 const image = css({
