@@ -11,16 +11,14 @@ export const PageNotFound = () => {
     }, []);
 
     return (
-        <>
-            <div className={classes.main}>
-                <div className={classes.content}>
-                    <h1>404</h1>
-                    <h3>Page not found</h3>
-                    <button className={classes.button} onClick={redirectLogin}>
-                        Return Login
-                    </button>
-                </div>
+        <div className={classes.main}>
+            <div className={classes.content}>
+                <h1>404</h1>
+                <h3>Page not found</h3>
+                <button className={classes.button} onClick={redirectLogin}>
+                    Return Login
+                </button>
             </div>
-        </>
+        </div>
     );
 };
