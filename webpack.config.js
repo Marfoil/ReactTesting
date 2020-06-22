@@ -1,3 +1,4 @@
+const dotenv = require('dotenv');
 const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
@@ -6,6 +7,15 @@ const modeConfig = env => require(`./build-utils/webpack.${env}`)();
 const presetConfig = require('./build-utils/loadPresets');
 
 const publicPath = filename => path.join(__dirname, `public/${filename}`);
+
+// call dotenv and it will return an Object with a parsed key
+const env = dotenv.config().parsed;
+
+// reduce it to a nice object, the same as before
+const envKeys = Object.keys(env).reduce((prev, next) => {
+    prev[`process.env.${next}`] = JSON.stringify(env[next]);
+    return prev;
+}, {});
 
 module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
     webpackMerge(
@@ -34,6 +44,7 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
                     template: publicPath('index.html'),
                 }),
                 new webpack.ProgressPlugin(),
+                new webpack.DefinePlugin(envKeys),
             ],
         },
         modeConfig(mode),
